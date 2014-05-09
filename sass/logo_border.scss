@@ -1,0 +1,58 @@
+#border-animation{
+	width: 740px;
+	height: 555x;
+    position: absolute;
+    top:100;
+    left:400;
+    overflow: hidden;
+}		 
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}		 
+#logo{
+	opacity: 0;
+	-webkit-animation:logo 10s ease-in-out 5s forwards paused;
+}
+@-webkit-keyframes logo{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+$text_pathLength:11722;
+#text{
+	stroke-dashoffset:$text_pathLength;
+	stroke-dasharray:$text_pathLength $text_pathLength;
+	-webkit-animation:borderT 20s ease-in-out 2s forwards paused;
+}
+#cube{
+	stroke-dashoffset: 11618;
+	stroke-dasharray: 11618 11618;
+	-webkit-animation: borderC 20s ease-in-out forwards paused; 
+}	
+@-webkit-keyframes borderT{
+	0%{
+		stroke-dashoffset:11722;
+	}
+	99%{
+		stroke-dashoffset:0;
+	}
+	100%{
+		opacity:0;
+	}
+}
+@-webkit-keyframes borderC{
+	0%{
+		stroke-dashoffset:11618;
+	}
+	99%{
+		stroke-dashoffset:0;
+	}
+	100%{
+		opacity:0;
+	}
+}

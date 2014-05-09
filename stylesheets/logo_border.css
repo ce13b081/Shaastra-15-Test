@@ -1,0 +1,82 @@
+/* line 1, ../sass/logo_border.scss */
+#border-animation {
+  width: 740px;
+  height: 555x;
+  position: absolute;
+  top: 100;
+  left: 400;
+  overflow: hidden;
+}
+
+/* line 9, ../sass/logo_border.scss */
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 14, ../sass/logo_border.scss */
+#logo {
+  opacity: 0;
+  -webkit-animation: logo 10s ease-in-out 5s forwards paused;
+}
+
+@-webkit-keyframes logo {
+  /* line 19, ../sass/logo_border.scss */
+  from {
+    opacity: 0;
+  }
+
+  /* line 22, ../sass/logo_border.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+/* line 27, ../sass/logo_border.scss */
+#text {
+  stroke-dashoffset: 11722;
+  stroke-dasharray: 11722 11722;
+  -webkit-animation: borderT 20s ease-in-out 2s forwards paused;
+}
+
+/* line 32, ../sass/logo_border.scss */
+#cube {
+  stroke-dashoffset: 11618;
+  stroke-dasharray: 11618 11618;
+  -webkit-animation: borderC 20s ease-in-out forwards paused;
+}
+
+@-webkit-keyframes borderT {
+  /* line 38, ../sass/logo_border.scss */
+  0% {
+    stroke-dashoffset: 11722;
+  }
+
+  /* line 41, ../sass/logo_border.scss */
+  99% {
+    stroke-dashoffset: 0;
+  }
+
+  /* line 44, ../sass/logo_border.scss */
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes borderC {
+  /* line 49, ../sass/logo_border.scss */
+  0% {
+    stroke-dashoffset: 11618;
+  }
+
+  /* line 52, ../sass/logo_border.scss */
+  99% {
+    stroke-dashoffset: 0;
+  }
+
+  /* line 55, ../sass/logo_border.scss */
+  100% {
+    opacity: 0;
+  }
+}

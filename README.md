@@ -1,0 +1,1 @@
+1. Logo border animation as seen on http://carlphilippebrenner.com/portfolio/uji

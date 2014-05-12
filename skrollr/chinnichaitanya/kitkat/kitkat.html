@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+		<title></title>
+		
+		<link href="skrollr-master/examples/fixed-positioning.css" rel="stylesheet" type="text/css" />
+		<link href="skrollr-master/examples/main.css" rel="stylesheet" type="text/css" />	
+		
+	</head>
+	
+	<body>
+		<div style="background-color:red; height:100%; width:100%"> 
+			<img src="kitkat_intro/KK_DesignSeq_01__00001.png" style="position:absolute" data-0="top:50px; left:100px; opacity:1" data-1="opacity:0">
+		</div>	
+		
+		
+		<div style="position:absolute; z-index:2" data-0="top:150px; left:550px; opacity:1" data-1="opacity:0.5" data-2="opacity:0">
+			<div style="color:white">
+				<h2> hello </h2>
+				<p> blah blah blah </p>
+			</div>
+		</div>
+		
+		
+		<div style="z-index:2">			
+			<img src="kitkat_intro/KK_DesignSeq_01__00002.png" style="position:absolute" data-0="opacity:0; top:57px; left:105px" data-1=	"opacity:1" data-2="opacity:0">
+			<img src="kitkat_intro/KK_DesignSeq_01__00003.png" style="position:absolute" data-0="opacity:0; top:70px; left:108px;" data-1="opacity:0" data-2="opacity:1" data-3="opacity:0">
+			<img src="kitkat_intro/KK_DesignSeq_01__00004.png" style="position:absolute" data-0="opacity:0; top:70px; left:108px;" data-2="opacity:0" data-3="opacity:1" data-4="opacity:0">
+			<img src="kitkat_intro/KK_DesignSeq_01__00005.png" style="position:absolute" data-0="opacity:0; top:50px; left:112px" data-3="opacity:0" data-4="opacity:1" data-5="opacity:0">
+			<img src="kitkat_intro/KK_DesignSeq_01__00006.png" style="position:absolute" data-0="opacity:0; top:43px; left:117px" data-4="opacity:0" data-5="opacity:1" data-6="opacity:0">
+			<img src="kitkat_intro/KK_DesignSeq_01__00007.png" style="position:absolute" data-0="opacity:0; top:38px; left:120px" data-5="opacity:0" data-6="opacity:1" data-7="opacity:0">
+			<img src="kitkat_intro/KK_DesignSeq_01__00008.png" style="position:absolute" data-0="opacity:0; top:37px; left:121px" data-6="opacity:0" data-7="opacity:1" data-8="opacity:0">
+			<img src="kitkat_intro/KK_DesignSeq_01__00009.png" style="position:absolute" data-0="opacity:0; top:40px; left:123px" data-7=	"opacity:0" data-8="opacity:1" data-9="opacity:0">
+			<img src="kitkat_intro/KK_DesignSeq_01__00010.png" style="position:absolute" data-0="opacity:0; top:43px; left:124px" data-8="opacity:0" data-9="opacity:1" data-10="opacity:0">
+			<img src="kitkat_intro/KK_DesignSeq_01__00011.png" style="position:absolute" data-0="opacity:0; top:48px; left:124px" data-9="opacity:0" data-10="opacity:1" data-11="opacity:0">
+			<img src="kitkat_intro/KK_DesignSeq_01__00012.png" style="position:absolute" data-0="opacity:0; top:50px; left:124px" data-10="opacity:0" data-11="opacity:1" data-12="opacity:0">
+			<img src="kitkat_intro/KK_DesignSeq_01__00013.png" style="position:absolute" data-0="opacity:0; top:51px; left:124px" data-11=	"opacity:0" data-12="opacity:1" data-13="opacity:0">
+			<img src="kitkat_intro/KK_DesignSeq_01__00014.png" style="position:absolute; top:51px; left:124px" data-0="opacity:0; top:51px; left:124px" data-12="opacity:0" data-13="opacity:1" data-14="opacity:1">			
+		</div>
+		
+		
+		<div style="position:absolute; z-index:1; background-color:white; height:100%; width:100%" data-0="left:0%; top:100%" data-15="left:0%; top:100%" data-100="left:0%; top:0%">		
+			<div style="position:absolute; z-index:3; color:red; top:150px; left:200px">
+				<h2>Eye Candy.</h2>
+				<h3>It really does taste as good as it looks.</h3>
+				<p>78 years of precision confectionery engineering has resulted in a chocolate bar of near perfect, four-dimensional symmetry.</p>
+				<p>Diamond-sharp bevels machined to salivatingly tight tolerances help transform the chocolate bar with the long history into the chocolate bar of the future.</p>			
+			</div>		
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<script type="text/javascript" src="skrollr-master/dist/skrollr.min.js"></script>		
+		
+		<script>
+			
+		var s = skrollr.init({
+			edgeStrategy: 'set',
+			easing: {
+				WTF: Math.random,
+				inverted: function(p) {
+					return 1-p;
+				}
+			}
+		});
+			
+		</script>
+		
+	</body>
+	
+</html>	

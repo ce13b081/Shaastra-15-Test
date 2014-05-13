@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 Rukiks's tutorial Step(I)</title>
+<style>
+    body {padding: 4em;}
+    #control{position: absolute;top:500px;}
+    #control input[type="checkbox"]{width:20px;height:20px;}
+    #control input[type="range"]{
+    -webkit-appearance: textfield;
+    padding: 1px;
+    background-color: #333;
+    border: 2px inset;
+    cursor: auto;
+    height:15px;
+}
+</style>
+
+
+<style>
+/*CUBE 3D TRANSFORMATIONS*/
+
+#cube-container{
+    position:absolute;
+    left: 100px;
+}
+
+#cube-viewport{
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+
+    -webkit-perspective-origin: 50% 200px;
+    -moz-perspective-origin: 50% 200px;
+}
+
+#cube{
+    opacity: 1;   
+    height: 400px;
+    width: 400px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+        
+}
+#cube .cubie{
+    position:absolute;
+    margin: 1px;
+    border: 3px solid black;
+    border-radius: 15px;
+
+    width:  300px;
+    height: 300px;
+    z-index: -1;
+    text-align: center;
+    font-size:30px;    
+}
+
+#cube .cubie > div{
+    line-height: 100px;
+    border-radius: 8px;
+}
+#cube .cubie > div span{
+    opacity:0.6;
+    font-size:14px;
+}
+
+
+/* CUBIES POSITIONS*/
+
+/*UP FACE CUBIES*/
+
+.ucc {
+    -webkit-transform:rotateX(90deg) translate3d(150px,0,0);
+    -moz-transform:rotateX(90deg) translate3d(150px,0,0);
+}
+
+/*FRONT FACE CUBIES*/
+
+.fcc {
+    -webkit-transform:translate3d(150px,150px,150px);
+    -moz-transform:translate3d(150px,150px,150px);
+}
+
+
+/*DOWN FACE CUBIES*/
+
+.dcc {
+    -webkit-transform:rotateX(-90deg) translate3d(150px,0px,300px);
+    -moz-transform:rotateX(-90deg) translate3d(150px,0px,300px);
+}
+
+/*BACK FACE CUBIES*/
+
+.bcc {
+    -webkit-transform:rotateX(-180deg) translate3d(150px,-150px,150px);
+    -moz-transform:rotateX(-180deg) translate3d(150px,-150px,150px);
+}
+
+/*LEFT FACE CUBIES*/
+
+.lcc {
+    -webkit-transform:rotateY(-90deg) translate3d(0px,150px,0px);
+    -moz-transform:rotateY(-90deg) translate3d(0px,150px,0px);
+}
+
+/*RIGHT FACE*/
+.rcc {
+    -webkit-transform:rotateY(90deg) translate3d(0px,150px,300px);
+    -moz-transform:rotateY(90deg) translate3d(0px,150px,300px);
+}
+
+</style>
+
+
+</head>
+<body>
+<section id="rubik">
+<div id="cube-container">
+    <div id="cube-viewport">
+        <div id="cube" style="-webkit-transform: rotateX(0deg) rotateY(130deg)">
+        <!-- UP FACE -->            
+            
+            <div class="ucc cubie"><div><img src="dice.png" style = "height: 300px;"></div></div>
+           
+
+        <!-- FRONT FACE -->
+            <!-- LEFT COLUMN (L)  -->                
+           
+            <div class="fcc cubie"><div><img src="dice.png" style = "height: 300px;"></div></div>
+           
+        <!-- END FRONT FACE -->
+        
+        <!--DOWN FACE -->
+           
+            <div class="dcc cubie"><div><img src="dice.png" style = "height: 300px;"></div></div>
+           
+        <!-- END DOWN FACE -->
+        
+        <!--BACK FACE -->    
+          
+            <div class="bcc cubie"><div><img src="dice.png" style = "height: 300px;"></div></div>
+          
+        <!--END BOTTOM FACE --> 
+        
+        <!--LEFT FACE -->
+          
+            <div class="lcc cubie"><div><img src="dice.png" style = "height: 300px;"></div></div>
+          
+        <!--END LEFT FACE -->   
+        
+        <!--RIGHT FACE -->
+          
+            <div class="rcc cubie"><div><img src="dice.png" style = "height: 300px;"></div></div>
+         
+        <!--END LEFT FACE -->  
+              
+         </div>
+    </div>
+</div>  
+</section>
+
+
+<!-- CONTROLS -->
+<section id="control">
+    <p>X: <input id="rx" type="range" max="360" min="0" value="0" onchange="rotate()"></p>
+    <p>Y: <input id="ry" type="range" max="360" min="0" value="130" onchange="rotate()"></p>
+    <p>Plane: <input id="plane" type="checkbox" onclick="showPlane(this)"></p>
+    <script>
+     document.querySelector('#cube').addEventListener("mousemove", mouseOver, false);
+       function mouseOver(e){
+        var x = e.pageX * 0.2,
+            y = e.pageY * 0.2;
+        rotate(x,y);
+        }
+        function showPlane(c){
+            document.querySelector('#cube').style.background = c.checked ? '#CCC': '';
+        }
+        function rotate(newX,newY){
+            var x = parseInt(document.querySelector('#rx').value,10) + (newX || 0),
+                y = parseInt(document.querySelector('#ry').value,10) + (newY || 0),
+            cube = document.getElementById('cube');
+
+            cube.style.webkitTransform = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+            cube.style.MozTransform = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+            //cube.style.transform = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+        }
+    </script>
+</section>
+
+</body>
+</html>

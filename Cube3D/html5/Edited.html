@@ -36,8 +36,8 @@
 
 #cube{
     opacity: 1;   
-    height: 400px;
-    width: 400px;
+    height: 200px;
+    width: 200px;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
         
@@ -48,8 +48,8 @@
     border: 3px solid black;
     border-radius: 15px;
 
-    width:  300px;
-    height: 300px;
+    width:  200px;
+    height: 200px;
     z-index: -1;
     text-align: center;
     font-size:30px;    
@@ -70,43 +70,43 @@
 /*UP FACE CUBIES*/
 
 .ucc {
-    -webkit-transform:rotateX(90deg) translate3d(150px,0,0);
-    -moz-transform:rotateX(90deg) translate3d(150px,0,0);
+    -webkit-transform:rotateX(90deg) translate3d(0px,0,0);
+    -moz-transform:rotateX(90deg) translate3d(0px,0,0);
 }
 
 /*FRONT FACE CUBIES*/
 
 .fcc {
-    -webkit-transform:translate3d(150px,150px,150px);
-    -moz-transform:translate3d(150px,150px,150px);
+    -webkit-transform:translate3d(0px,100px,100px);
+    -moz-transform:translate3d(0px,100px,100px);
 }
 
 
 /*DOWN FACE CUBIES*/
 
 .dcc {
-    -webkit-transform:rotateX(-90deg) translate3d(150px,0px,300px);
-    -moz-transform:rotateX(-90deg) translate3d(150px,0px,300px);
+    -webkit-transform:rotateX(-90deg) translate3d(0px,0px,200px);
+    -moz-transform:rotateX(-90deg) translate3d(0px,0px,200px);
 }
 
 /*BACK FACE CUBIES*/
 
 .bcc {
-    -webkit-transform:rotateX(-180deg) translate3d(150px,-150px,150px);
-    -moz-transform:rotateX(-180deg) translate3d(150px,-150px,150px);
+    -webkit-transform:rotateX(-180deg) translate3d(0px,-100px,100px);
+    -moz-transform:rotateX(-180deg) translate3d(0px,-100px,100px);
 }
 
 /*LEFT FACE CUBIES*/
 
 .lcc {
-    -webkit-transform:rotateY(-90deg) translate3d(0px,150px,0px);
-    -moz-transform:rotateY(-90deg) translate3d(0px,150px,0px);
+    -webkit-transform:rotateY(-90deg) translate3d(0px,100px,100px);
+    -moz-transform:rotateY(-90deg) translate3d(0px,100px,100px);
 }
 
 /*RIGHT FACE*/
 .rcc {
-    -webkit-transform:rotateY(90deg) translate3d(0px,150px,300px);
-    -moz-transform:rotateY(90deg) translate3d(0px,150px,300px);
+    -webkit-transform:rotateY(90deg) translate3d(0px,100px,100px);
+    -moz-transform:rotateY(90deg) translate3d(0px,100px,100px);
 }
 
 </style>
@@ -120,37 +120,37 @@
         <div id="cube" style="-webkit-transform: rotateX(0deg) rotateY(130deg)">
         <!-- UP FACE -->            
             
-            <div class="ucc cubie"><div><img src="dice.png" style = "height: 300px;"></div></div>
+            <div class="ucc cubie"><div><img src="dice.png" style = "height: 200px;"></div></div>
            
 
         <!-- FRONT FACE -->
             <!-- LEFT COLUMN (L)  -->                
            
-            <div class="fcc cubie"><div><img src="dice.png" style = "height: 300px;"></div></div>
+            <div class="fcc cubie"><div><img src="dice.png" style = "height: 200px;"></div></div>
            
         <!-- END FRONT FACE -->
         
         <!--DOWN FACE -->
            
-            <div class="dcc cubie"><div><img src="dice.png" style = "height: 300px;"></div></div>
+            <div class="dcc cubie"><div><img src="dice.png" style = "height: 200px;"></div></div>
            
         <!-- END DOWN FACE -->
         
         <!--BACK FACE -->    
           
-            <div class="bcc cubie"><div><img src="dice.png" style = "height: 300px;"></div></div>
+            <div class="bcc cubie"><div><img src="dice.png" style = "height: 200px;"></div></div>
           
         <!--END BOTTOM FACE --> 
         
         <!--LEFT FACE -->
           
-            <div class="lcc cubie"><div><img src="dice.png" style = "height: 300px;"></div></div>
+            <div class="lcc cubie"><div><img src="dice.png" style = "height: 200px;"></div></div>
           
         <!--END LEFT FACE -->   
         
         <!--RIGHT FACE -->
           
-            <div class="rcc cubie"><div><img src="dice.png" style = "height: 300px;"></div></div>
+            <div class="rcc cubie"><div><img src="dice.png" style = "height: 200px;"></div></div>
          
         <!--END LEFT FACE -->  
               
